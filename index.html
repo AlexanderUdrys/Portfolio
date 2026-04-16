@@ -558,7 +558,27 @@ img {
     .exp-item { grid-template-columns: 200px 1fr; }
     .exp-images { display: none; }
   }
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
 
+  nav {
+    display: none;
+  }
+
+  .project-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { gap: 1.2rem; }
